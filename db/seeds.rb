@@ -14,6 +14,8 @@ RestaurantPizza.create(price: 10, restaurant_id: 1, pizza_id: 1)
 RestaurantPizza.create(price: 12, restaurant_id: 1, pizza_id: 2)
 RestaurantPizza.create(price: 15, restaurant_id: 2, pizza_id: 3)
 RestaurantPizza.create(price: 20, restaurant_id: 3, pizza_id: 4)
-
+##done
+puts "🍕 initializing seeding!"
 puts "🍕 Done seeding!"
+
 
