@@ -1,18 +1,10 @@
 class RestaurantPizzasController < ApplicationController
-    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entitiy_response
-
-    def create 
-        restaurant_pizza = RestaurantPizza.create!(restaurant_pizza_params)
-        render json: restaurant_pizza.pizza, status: :created
+    def create
+      result = CreateRestaurantPizza.new.call(params[:price], params[:pizza_id], params[:restaurant_id])
+      if result.success?
+        render json: result.pizza
+      else
+        render json: { errors: result.errors.full_messages }, status: :unprocessable_entity
+      end
     end
-
-    private
-
-    def restaurant_pizza_params
-        params.permit(:pizza_id, :restaurant_id, :price)
-    end
-
-    def render_unprocessable_entitiy_response(exception)
-        render json: {errors: exception.record.errors.full_messages}, status: :unprocessable_entity
-    end
-end
+  end
