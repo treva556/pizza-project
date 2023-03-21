@@ -2,6 +2,8 @@
 https://pizzamojjo-nom.onrender.com/
 
 - This is a backend api that displays json data when run  and is the data fetched by a front-end app
+-To view the data click the link then navigate to the routes 
+  e.g https://pizzamojjo-nom.onrender.com/pizzas
 
 ## Tools Used
 - Rails 7.0.4.3
