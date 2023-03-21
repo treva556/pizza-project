@@ -39,11 +39,11 @@ Remember to replace your username when cloning.
 ## Running the application
 Install required dependencies using bundle
 
-    bundle install
+  bundle install
 
 then, migrate and seed the data using 
 
-    rails db:mirate db:seed
+  rails db:mirate db:seed
 
 finally, run rails s to start up the server
 ## Author
