@@ -19,11 +19,11 @@ In order to use this repo you need to have the following installed:
 ## Running the application
 Install required dependencies using bundle
 
-bundle install
+    bundle install
 
-then migrate and seed the data using 
+then, migrate and seed the data using 
 
-rails db:mirate db:seed
+    rails db:mirate db:seed
 
 finally, run rails s to start up the server
 ## Author
