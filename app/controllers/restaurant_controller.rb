@@ -1,4 +1,4 @@
-class RestaurantController < ApplicationController
+class RestaurantsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :not_found_response
    
     def index 
@@ -22,4 +22,5 @@ class RestaurantController < ApplicationController
     def not_found_response 
         render json: {error: "Restaurant not found"}, status: :not_found
     end
+
 end

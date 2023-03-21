@@ -1,4 +1,4 @@
-class RestaurantPizzaController < ApplicationController
+class RestaurantPizzasController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entitiy_response
 
     def create 
